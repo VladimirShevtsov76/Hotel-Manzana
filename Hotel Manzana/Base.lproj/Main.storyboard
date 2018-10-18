@@ -89,26 +89,28 @@
                             </tableViewSection>
                             <tableViewSection id="lpm-WB-HyD">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="lLR-8K-mCQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="iGN-ac-up7" detailTextLabel="exA-TG-73N" style="IBUITableViewCellStyleValue1" id="lLR-8K-mCQ">
                                         <rect key="frame" x="0.0" y="203" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lLR-8K-mCQ" id="hAr-od-rRR">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата заезда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wi5-fp-8H0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Дата заезда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iGN-ac-up7">
+                                                    <rect key="frame" x="16" y="12" width="98" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text=" October 18, 2018" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="exA-TG-73N">
+                                                    <rect key="frame" x="222.5" y="12" width="136.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Wi5-fp-8H0" firstAttribute="top" secondItem="hAr-od-rRR" secondAttribute="top" id="O6p-41-tEy"/>
-                                                <constraint firstAttribute="trailing" secondItem="Wi5-fp-8H0" secondAttribute="trailing" id="lAp-Oh-frL"/>
-                                                <constraint firstItem="Wi5-fp-8H0" firstAttribute="leading" secondItem="hAr-od-rRR" secondAttribute="leading" id="lBY-td-TEM"/>
-                                                <constraint firstAttribute="bottom" secondItem="Wi5-fp-8H0" secondAttribute="bottom" id="uAP-pO-UQX"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ql2-ZT-HlG">
@@ -133,26 +135,28 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nzx-MY-3tZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Rwg-LQ-Ssu" detailTextLabel="d8q-GY-Kmv" style="IBUITableViewCellStyleValue1" id="nzx-MY-3tZ">
                                         <rect key="frame" x="0.0" y="291" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nzx-MY-3tZ" id="qTo-bv-NTW">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата выезда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qq-eO-N4o">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Дата выезда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rwg-LQ-Ssu">
+                                                    <rect key="frame" x="16" y="12" width="101" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="October 20, 2018" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d8q-GY-Kmv">
+                                                    <rect key="frame" x="225" y="12" width="134" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="9qq-eO-N4o" firstAttribute="top" secondItem="qTo-bv-NTW" secondAttribute="top" id="9BV-3a-Qek"/>
-                                                <constraint firstAttribute="bottom" secondItem="9qq-eO-N4o" secondAttribute="bottom" id="Kgi-Tm-NyM"/>
-                                                <constraint firstItem="9qq-eO-N4o" firstAttribute="leading" secondItem="qTo-bv-NTW" secondAttribute="leading" id="OJ4-2N-GUd"/>
-                                                <constraint firstAttribute="trailing" secondItem="9qq-eO-N4o" secondAttribute="trailing" id="aYI-9Q-SYO"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yXG-9F-bCe">
@@ -193,6 +197,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="checkInDateLabel" destination="exA-TG-73N" id="KBH-fP-g7m"/>
+                        <outlet property="checkInDatePicker" destination="7M3-nk-KMH" id="l1S-3R-YaD"/>
+                        <outlet property="checkOutDateLabel" destination="d8q-GY-Kmv" id="35r-v9-IEd"/>
+                        <outlet property="checkOutDatePicker" destination="Dqx-zx-9E4" id="KEh-23-1uk"/>
                         <outlet property="emailTextField" destination="bif-yx-GaO" id="54b-tl-wJU"/>
                         <outlet property="firstNameTextField" destination="cd2-gw-nRP" id="a8B-LM-kwp"/>
                         <outlet property="lastNameTextField" destination="SxZ-g1-WgX" id="Mix-Sr-12x"/>
