@@ -198,23 +198,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t3V-yr-fSp">
-                                                    <rect key="frame" x="16" y="0.0" width="359" height="43.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t3V-yr-fSp">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Взрослые" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="754-r7-Imx">
-                                                            <rect key="frame" x="0.0" y="11.5" width="114.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="11.5" width="223" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umZ-jm-lWD">
-                                                            <rect key="frame" x="122.5" y="11.5" width="114" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umZ-jm-lWD">
+                                                            <rect key="frame" x="231" y="11.5" width="10" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="izQ-u8-2PO">
-                                                            <rect key="frame" x="244.5" y="7.5" width="94" height="29"/>
+                                                            <rect key="frame" x="249" y="7.5" width="94" height="29"/>
                                                             <connections>
                                                                 <action selector="stepperValueChanged:" destination="VaU-Jn-Xjp" eventType="valueChanged" id="Ho7-58-m2I"/>
                                                             </connections>
@@ -226,7 +226,7 @@
                                                 <constraint firstItem="t3V-yr-fSp" firstAttribute="top" secondItem="6ZW-Lh-eG6" secondAttribute="top" id="Qol-k7-8bi"/>
                                                 <constraint firstAttribute="bottom" secondItem="t3V-yr-fSp" secondAttribute="bottom" id="aB5-l0-0hI"/>
                                                 <constraint firstItem="t3V-yr-fSp" firstAttribute="leading" secondItem="6ZW-Lh-eG6" secondAttribute="leading" constant="16" id="ajp-06-Apb"/>
-                                                <constraint firstAttribute="trailing" secondItem="t3V-yr-fSp" secondAttribute="trailing" id="kEJ-qF-JuI"/>
+                                                <constraint firstAttribute="trailing" secondItem="t3V-yr-fSp" secondAttribute="trailing" constant="16" id="kEJ-qF-JuI"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -237,23 +237,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Erp-Hf-fxh">
-                                                    <rect key="frame" x="16" y="0.0" width="359" height="43.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Erp-Hf-fxh">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дети" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kp-m1-yiL">
-                                                            <rect key="frame" x="0.0" y="11.5" width="114.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="11.5" width="222.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqz-zS-enj">
-                                                            <rect key="frame" x="122.5" y="11.5" width="114" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqz-zS-enj">
+                                                            <rect key="frame" x="230.5" y="11.5" width="10.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lGv-Ea-r0Y">
-                                                            <rect key="frame" x="244.5" y="7.5" width="94" height="29"/>
+                                                            <rect key="frame" x="249" y="7.5" width="94" height="29"/>
                                                             <connections>
                                                                 <action selector="stepperValueChanged:" destination="VaU-Jn-Xjp" eventType="valueChanged" id="Pc5-gd-94y"/>
                                                             </connections>
@@ -265,7 +265,50 @@
                                                 <constraint firstAttribute="bottom" secondItem="Erp-Hf-fxh" secondAttribute="bottom" id="IZM-zX-Be0"/>
                                                 <constraint firstItem="Erp-Hf-fxh" firstAttribute="leading" secondItem="fGq-Rm-4Dy" secondAttribute="leading" constant="16" id="Klw-TA-56s"/>
                                                 <constraint firstItem="Erp-Hf-fxh" firstAttribute="top" secondItem="fGq-Rm-4Dy" secondAttribute="top" id="gJs-ZE-GhT"/>
-                                                <constraint firstAttribute="trailing" secondItem="Erp-Hf-fxh" secondAttribute="trailing" id="s0F-O4-F3k"/>
+                                                <constraint firstAttribute="trailing" secondItem="Erp-Hf-fxh" secondAttribute="trailing" constant="16" id="s0F-O4-F3k"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="iPK-ll-jn4">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7Qq-Wm-8fC">
+                                        <rect key="frame" x="0.0" y="539" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Qq-Wm-8fC" id="Ogr-cO-VaZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WCA-6Y-k8L">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wi-Fi (в день)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jme-jO-4wR">
+                                                            <rect key="frame" x="0.0" y="11.5" width="249.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcW-EO-1EC">
+                                                            <rect key="frame" x="257.5" y="11.5" width="28.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qmm-ss-8tU">
+                                                            <rect key="frame" x="294" y="6.5" width="51" height="31"/>
+                                                            <connections>
+                                                                <action selector="wifiSwitchChanged:" destination="VaU-Jn-Xjp" eventType="valueChanged" id="53i-Tl-kWR"/>
+                                                            </connections>
+                                                        </switch>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="WCA-6Y-k8L" secondAttribute="trailing" constant="16" id="5bc-OB-eBR"/>
+                                                <constraint firstItem="WCA-6Y-k8L" firstAttribute="top" secondItem="Ogr-cO-VaZ" secondAttribute="top" id="NWP-9U-bXy"/>
+                                                <constraint firstItem="WCA-6Y-k8L" firstAttribute="leading" secondItem="Ogr-cO-VaZ" secondAttribute="leading" constant="16" id="Nn9-VB-zQz"/>
+                                                <constraint firstAttribute="bottom" secondItem="WCA-6Y-k8L" secondAttribute="bottom" id="lJJ-SY-Qog"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -296,6 +339,7 @@
                         <outlet property="numberOfAdultsStepper" destination="izQ-u8-2PO" id="7p4-kD-obe"/>
                         <outlet property="numberOfChildrenLabel" destination="bqz-zS-enj" id="InE-Pq-lIC"/>
                         <outlet property="numberOfChildrenStepper" destination="lGv-Ea-r0Y" id="26O-hU-ctX"/>
+                        <outlet property="wifiSwitch" destination="Qmm-ss-8tU" id="Ctn-li-fZX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="at9-sb-BTW" userLabel="First Responder" sceneMemberID="firstResponder"/>

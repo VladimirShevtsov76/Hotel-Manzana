@@ -23,6 +23,8 @@ class AddRegistrationTableViewController: UITableViewController {
     @IBOutlet weak var numberOfChildrenLabel: UILabel!
     @IBOutlet weak var numberOfChildrenStepper: UIStepper!
     
+    @IBOutlet weak var wifiSwitch: UISwitch!
+    
     let checkInDatePickerCellIndexPath = IndexPath(row: 1, section: 1)
     let checkOutDatePickerCellIndexPath = IndexPath(row: 3, section: 1)
     
@@ -123,6 +125,7 @@ class AddRegistrationTableViewController: UITableViewController {
         let checkOutDate = checkOutDatePicker.date
         let numberOfAdults = Int(numberOfAdultsStepper.value)
         let numberOfChildren = Int(numberOfChildrenStepper.value)
+        let hasWifi = wifiSwitch.isOn
         
         print(#function)
         print("First Name: \(firstName)")
@@ -132,6 +135,7 @@ class AddRegistrationTableViewController: UITableViewController {
         print("Check Out: \(checkOutDate)")
         print("Number of Adults: \(numberOfAdults)")
         print("Number of Children: \(numberOfChildren)")
+        print("Wi-Fi: \(hasWifi)")
     }
     
     
@@ -141,5 +145,8 @@ class AddRegistrationTableViewController: UITableViewController {
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         updateNumberOfGuests()
+    }
+    
+    @IBAction func wifiSwitchChanged(_ sender: UISwitch) {
     }
 }
