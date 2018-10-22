@@ -27,6 +27,14 @@ struct RoomType {
     var name: String
     var shortName: String
     var price: Int
+    
+    static var all: [RoomType] {
+        return [
+            RoomType(id: 0, name: "Две кровати", shortName: "2Q", price: 179),
+            RoomType(id: 1, name: "Одна кровать", shortName: "1K", price: 209),
+            RoomType(id: 2, name: "Пентхаус", shortName: "PHS", price: 309),
+        ]
+    }
 }
 
 extension RoomType: Equatable {

@@ -8,7 +8,8 @@
 
 import UIKit
 
-class AddRegistrationTableViewController: UITableViewController {
+class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeTableViewControllerDelegate {
+    
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -25,8 +26,12 @@ class AddRegistrationTableViewController: UITableViewController {
     
     @IBOutlet weak var wifiSwitch: UISwitch!
     
+    @IBOutlet weak var roomTypeLabel: UILabel!
+    
     let checkInDatePickerCellIndexPath = IndexPath(row: 1, section: 1)
     let checkOutDatePickerCellIndexPath = IndexPath(row: 3, section: 1)
+    
+    var roomType: RoomType?
     
     var isCheckInDatePickerShown: Bool = false {
         didSet {
@@ -40,6 +45,32 @@ class AddRegistrationTableViewController: UITableViewController {
         }
     }
     
+    var registration: Registration? {
+        
+        guard let roomType = roomType else { return nil }
+        
+        let firstName = firstNameTextField.text ?? ""
+        let lastName = lastNameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        let checkInDate = checkInDatePicker.date
+        let checkOutDate = checkOutDatePicker.date
+        let numberOfAdults = Int(numberOfAdultsStepper.value)
+        let numberOfChildren = Int(numberOfChildrenStepper.value)
+        let hasWifi = wifiSwitch.isOn
+        
+        return Registration(
+            firstName: firstName,
+            lastName: lastName,
+            emailAddress: email,
+            checkInDate: checkInDate,
+            checkOutDate: checkOutDate,
+            numberOfAdults: numberOfAdults,
+            numberOfChildren: numberOfChildren,
+            roomType: roomType,
+            wifi: hasWifi
+        )
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +80,7 @@ class AddRegistrationTableViewController: UITableViewController {
         updateDateViews()
         numberOfAdultsStepper.value = 2
         updateNumberOfGuests()
+        updateRoomType()
     }
     
     func updateDateViews() {
@@ -64,6 +96,15 @@ class AddRegistrationTableViewController: UITableViewController {
     func updateNumberOfGuests() {
         numberOfAdultsLabel.text = "\(Int(numberOfAdultsStepper.value))"
         numberOfChildrenLabel.text = "\(Int(numberOfChildrenStepper.value))"
+    }
+    
+    func updateRoomType() {
+        roomTypeLabel.text = roomType?.name ?? "Не выбран"
+    }
+    
+    func didSelect(roomType: RoomType) {
+        self.roomType = roomType
+        updateRoomType()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -117,6 +158,14 @@ class AddRegistrationTableViewController: UITableViewController {
         tableView.endUpdates()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SelectRoomType" {
+            let destinationViewController = segue.destination as? SelectRoomTypeTableViewController
+            destinationViewController?.delegate = self
+            destinationViewController?.roomType = roomType
+        }
+    }
+    
     @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
         let firstName = firstNameTextField.text ?? ""
         let lastName = lastNameTextField.text ?? ""
@@ -126,6 +175,7 @@ class AddRegistrationTableViewController: UITableViewController {
         let numberOfAdults = Int(numberOfAdultsStepper.value)
         let numberOfChildren = Int(numberOfChildrenStepper.value)
         let hasWifi = wifiSwitch.isOn
+        let roomChoice = roomType?.name ?? "Не выбран"
         
         print(#function)
         print("First Name: \(firstName)")
@@ -136,6 +186,7 @@ class AddRegistrationTableViewController: UITableViewController {
         print("Number of Adults: \(numberOfAdults)")
         print("Number of Children: \(numberOfChildren)")
         print("Wi-Fi: \(hasWifi)")
+        print("Room type: \(roomChoice)")
     }
     
     
