@@ -2,8 +2,7 @@
 //  AppDelegate.swift
 //  Hotel Manzana
 //
-//  Created by Denis Bystruev on 18/10/2018.
-//  Copyright © 2018 Denis Bystruev. All rights reserved.
+//  Created by Vladimir Shevtsov on 03.12.2021.
 //
 
 import UIKit

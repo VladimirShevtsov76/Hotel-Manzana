@@ -13,9 +13,9 @@
 		6961E1452178F78600B499C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6961E1432178F78600B499C4 /* LaunchScreen.storyboard */; };
 		6961E14D2178F81400B499C4 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6961E14C2178F81400B499C4 /* Registration.swift */; };
 		6961E14F2178FFFC00B499C4 /* AddRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6961E14E2178FFFC00B499C4 /* AddRegistrationTableViewController.swift */; };
-		6996A0FB24B44F9F00EA6B9A /* Screenshot02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6996A0F924B44F9F00EA6B9A /* Screenshot02.jpeg */; };
-		6996A0FC24B44F9F00EA6B9A /* Screenshot01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6996A0FA24B44F9F00EA6B9A /* Screenshot01.jpeg */; };
 		69B62688217D9EDB001DBC4A /* SelectRoomTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B62687217D9EDB001DBC4A /* SelectRoomTypeTableViewController.swift */; };
+		B1B212E42767809D006461F7 /* Screenshot01.png in Resources */ = {isa = PBXBuildFile; fileRef = B1B212E22767809D006461F7 /* Screenshot01.png */; };
+		B1B212E52767809D006461F7 /* Screenshot02.png in Resources */ = {isa = PBXBuildFile; fileRef = B1B212E32767809D006461F7 /* Screenshot02.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		6961E1462178F78600B499C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6961E14C2178F81400B499C4 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		6961E14E2178FFFC00B499C4 /* AddRegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegistrationTableViewController.swift; sourceTree = "<group>"; };
-		6996A0F924B44F9F00EA6B9A /* Screenshot02.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Screenshot02.jpeg; sourceTree = "<group>"; };
-		6996A0FA24B44F9F00EA6B9A /* Screenshot01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Screenshot01.jpeg; sourceTree = "<group>"; };
 		69B62687217D9EDB001DBC4A /* SelectRoomTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoomTypeTableViewController.swift; sourceTree = "<group>"; };
+		B1B212E22767809D006461F7 /* Screenshot01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot01.png; sourceTree = "<group>"; };
+		B1B212E32767809D006461F7 /* Screenshot02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot02.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +62,11 @@
 		6961E1392178F78000B499C4 /* Hotel Manzana */ = {
 			isa = PBXGroup;
 			children = (
-				6961E14E2178FFFC00B499C4 /* AddRegistrationTableViewController.swift */,
-				6961E13A2178F78000B499C4 /* AppDelegate.swift */,
-				6961E1412178F78600B499C4 /* Assets.xcassets */,
-				6961E1462178F78600B499C4 /* Info.plist */,
-				6961E1432178F78600B499C4 /* LaunchScreen.storyboard */,
-				6961E13E2178F78100B499C4 /* Main.storyboard */,
-				6961E14C2178F81400B499C4 /* Registration.swift */,
+				B1B212E02767776E006461F7 /* App */,
+				B1B212E127677786006461F7 /* Model */,
 				6996A0F824B44F9F00EA6B9A /* Screenshots */,
-				69B62687217D9EDB001DBC4A /* SelectRoomTypeTableViewController.swift */,
+				B1B212DE2767773A006461F7 /* View */,
+				B1B212DF27677745006461F7 /* ViewControllers */,
 			);
 			path = "Hotel Manzana";
 			sourceTree = "<group>";
@@ -78,10 +74,46 @@
 		6996A0F824B44F9F00EA6B9A /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				6996A0F924B44F9F00EA6B9A /* Screenshot02.jpeg */,
-				6996A0FA24B44F9F00EA6B9A /* Screenshot01.jpeg */,
+				B1B212E22767809D006461F7 /* Screenshot01.png */,
+				B1B212E32767809D006461F7 /* Screenshot02.png */,
 			);
 			path = Screenshots;
+			sourceTree = "<group>";
+		};
+		B1B212DE2767773A006461F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6961E1432178F78600B499C4 /* LaunchScreen.storyboard */,
+				6961E13E2178F78100B499C4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1B212DF27677745006461F7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6961E14E2178FFFC00B499C4 /* AddRegistrationTableViewController.swift */,
+				69B62687217D9EDB001DBC4A /* SelectRoomTypeTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B1B212E02767776E006461F7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6961E13A2178F78000B499C4 /* AppDelegate.swift */,
+				6961E1412178F78600B499C4 /* Assets.xcassets */,
+				6961E1462178F78600B499C4 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B1B212E127677786006461F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6961E14C2178F81400B499C4 /* Registration.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,7 +143,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = "Denis Bystruev";
 				TargetAttributes = {
 					6961E1362178F78000B499C4 = {
@@ -144,9 +176,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6961E1452178F78600B499C4 /* LaunchScreen.storyboard in Resources */,
-				6996A0FB24B44F9F00EA6B9A /* Screenshot02.jpeg in Resources */,
+				B1B212E42767809D006461F7 /* Screenshot01.png in Resources */,
 				6961E1422178F78600B499C4 /* Assets.xcassets in Resources */,
-				6996A0FC24B44F9F00EA6B9A /* Screenshot01.jpeg in Resources */,
+				B1B212E52767809D006461F7 /* Screenshot02.png in Resources */,
 				6961E1402178F78100B499C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +245,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -238,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,6 +307,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -293,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -309,8 +343,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2020.07.07;
-				DEVELOPMENT_TEAM = 8J39KF9DMS;
-				INFOPLIST_FILE = "Hotel Manzana/Info.plist";
+				DEVELOPMENT_TEAM = 9WKHJD3DKV;
+				INFOPLIST_FILE = "Hotel Manzana/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,8 +363,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2020.07.07;
-				DEVELOPMENT_TEAM = 8J39KF9DMS;
-				INFOPLIST_FILE = "Hotel Manzana/Info.plist";
+				DEVELOPMENT_TEAM = 9WKHJD3DKV;
+				INFOPLIST_FILE = "Hotel Manzana/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

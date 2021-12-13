@@ -2,33 +2,32 @@
 //  AddRegistrationTableViewController.swift
 //  Hotel Manzana
 //
-//  Created by Denis Bystruev on 18/10/2018.
-//  Copyright © 2018 Denis Bystruev. All rights reserved.
+//  Created by Vladimir Shevtsov on 03.12.2021.
 //
 
 import UIKit
 
 class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeTableViewControllerDelegate {
     
-    @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var lastNameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var firstNameTextField:      UITextField!
+    @IBOutlet weak var lastNameTextField:       UITextField!
+    @IBOutlet weak var emailTextField:          UITextField!
     
-    @IBOutlet weak var checkInDateLabel: UILabel!
-    @IBOutlet weak var checkInDatePicker: UIDatePicker!
-    @IBOutlet weak var checkOutDateLabel: UILabel!
-    @IBOutlet weak var checkOutDatePicker: UIDatePicker!
+    @IBOutlet weak var checkInDateLabel:        UILabel!
+    @IBOutlet weak var checkInDatePicker:       UIDatePicker!
+    @IBOutlet weak var checkOutDateLabel:       UILabel!
+    @IBOutlet weak var checkOutDatePicker:      UIDatePicker!
     
-    @IBOutlet weak var numberOfAdultsLabel: UILabel!
-    @IBOutlet weak var numberOfAdultsStepper: UIStepper!
-    @IBOutlet weak var numberOfChildrenLabel: UILabel!
+    @IBOutlet weak var numberOfAdultsLabel:     UILabel!
+    @IBOutlet weak var numberOfAdultsStepper:   UIStepper!
+    @IBOutlet weak var numberOfChildrenLabel:   UILabel!
     @IBOutlet weak var numberOfChildrenStepper: UIStepper!
     
-    @IBOutlet weak var wifiSwitch: UISwitch!
+    @IBOutlet weak var wifiSwitch:              UISwitch!
     
-    @IBOutlet weak var roomTypeLabel: UILabel!
+    @IBOutlet weak var roomTypeLabel:           UILabel!
     
-    let checkInDatePickerCellIndexPath = IndexPath(row: 1, section: 1)
+    let checkInDatePickerCellIndexPath  = IndexPath(row: 1, section: 1)
     let checkOutDatePickerCellIndexPath = IndexPath(row: 3, section: 1)
     
     var roomType: RoomType?
@@ -49,52 +48,54 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
         
         guard let roomType = roomType else { return nil }
         
-        let firstName = firstNameTextField.text ?? ""
-        let lastName = lastNameTextField.text ?? ""
-        let email = emailTextField.text ?? ""
-        let checkInDate = checkInDatePicker.date
-        let checkOutDate = checkOutDatePicker.date
-        let numberOfAdults = Int(numberOfAdultsStepper.value)
+        let firstName        = firstNameTextField.text ?? ""
+        let lastName         = lastNameTextField.text ?? ""
+        let email            = emailTextField.text ?? ""
+        let checkInDate      = checkInDatePicker.date
+        let checkOutDate     = checkOutDatePicker.date
+        let numberOfAdults   = Int(numberOfAdultsStepper.value)
         let numberOfChildren = Int(numberOfChildrenStepper.value)
-        let hasWifi = wifiSwitch.isOn
+        let hasWifi          = wifiSwitch.isOn
         
         return Registration(
-            firstName: firstName,
-            lastName: lastName,
-            emailAddress: email,
-            checkInDate: checkInDate,
-            checkOutDate: checkOutDate,
-            numberOfAdults: numberOfAdults,
+            firstName:        firstName,
+            lastName:         lastName,
+            emailAddress:     email,
+            checkInDate:      checkInDate,
+            checkOutDate:     checkOutDate,
+            numberOfAdults:   numberOfAdults,
             numberOfChildren: numberOfChildren,
-            roomType: roomType,
-            wifi: hasWifi
+            roomType:         roomType,
+            wifi:             hasWifi
         )
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let midnightToday = Calendar.current.startOfDay(for: Date())
+        
+        let midnightToday             = Calendar.current.startOfDay(for: Date())
         checkInDatePicker.minimumDate = midnightToday
-        checkInDatePicker.date = midnightToday
+        checkInDatePicker.date        = midnightToday
         updateDateViews()
-        numberOfAdultsStepper.value = 2
+        numberOfAdultsStepper.value   = 2
         updateNumberOfGuests()
         updateRoomType()
     }
     
     func updateDateViews() {
+        
         checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(60 * 60 * 24)
         
-        let dateFormatter = DateFormatter()
+        let dateFormatter       = DateFormatter()
         dateFormatter.dateStyle = .medium
         
-        checkInDateLabel.text = dateFormatter.string(from: checkInDatePicker.date)
-        checkOutDateLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
+        checkInDateLabel.text   = dateFormatter.string(from: checkInDatePicker.date)
+        checkOutDateLabel.text  = dateFormatter.string(from: checkOutDatePicker.date)
     }
     
     func updateNumberOfGuests() {
-        numberOfAdultsLabel.text = "\(Int(numberOfAdultsStepper.value))"
+        numberOfAdultsLabel.text   = "\(Int(numberOfAdultsStepper.value))"
         numberOfChildrenLabel.text = "\(Int(numberOfChildrenStepper.value))"
     }
     
@@ -134,25 +135,25 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
         switch (indexPath.section, indexPath.row) {
         case (checkInDatePickerCellIndexPath.section, checkInDatePickerCellIndexPath.row - 1):
             if isCheckInDatePickerShown {
-                isCheckInDatePickerShown = false
+                isCheckInDatePickerShown  = false
             } else if isCheckOutDatePickerShown {
                 isCheckOutDatePickerShown = false
-                isCheckInDatePickerShown = true
+                isCheckInDatePickerShown  = true
             } else {
-                isCheckInDatePickerShown = true
+                isCheckInDatePickerShown  = true
             }
         case (checkOutDatePickerCellIndexPath.section, checkOutDatePickerCellIndexPath.row - 1):
             if isCheckOutDatePickerShown {
                 isCheckOutDatePickerShown = false
             } else if isCheckInDatePickerShown {
-                isCheckInDatePickerShown = false
+                isCheckInDatePickerShown  = false
                 isCheckOutDatePickerShown = true
             } else {
                 isCheckOutDatePickerShown = true
             }
         default:
-            isCheckInDatePickerShown = false
-            isCheckOutDatePickerShown = false
+            isCheckInDatePickerShown      = false
+            isCheckOutDatePickerShown     = false
         }
         tableView.beginUpdates()
         tableView.endUpdates()
@@ -167,26 +168,27 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
     }
     
     @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
-        let firstName = firstNameTextField.text ?? ""
-        let lastName = lastNameTextField.text ?? ""
-        let email = emailTextField.text ?? ""
-        let checkInDate = checkInDatePicker.date
-        let checkOutDate = checkOutDatePicker.date
-        let numberOfAdults = Int(numberOfAdultsStepper.value)
+        
+        let firstName        = firstNameTextField.text ?? ""
+        let lastName         = lastNameTextField.text ?? ""
+        let email            = emailTextField.text ?? ""
+        let checkInDate      = checkInDatePicker.date
+        let checkOutDate     = checkOutDatePicker.date
+        let numberOfAdults   = Int(numberOfAdultsStepper.value)
         let numberOfChildren = Int(numberOfChildrenStepper.value)
-        let hasWifi = wifiSwitch.isOn
-        let roomChoice = roomType?.name ?? "Не выбран"
+        let hasWifi          = wifiSwitch.isOn
+        let roomChoice       = roomType?.name ?? "Не выбран"
         
         print(#function)
-        print("First Name: \(firstName)")
-        print("Last Name: \(lastName)")
-        print("E-mail: \(email)")
-        print("Check In: \(checkInDate)")
-        print("Check Out: \(checkOutDate)")
-        print("Number of Adults: \(numberOfAdults)")
+        print("First Name:         \(firstName)")
+        print("Last Name:          \(lastName)")
+        print("E-mail:             \(email)")
+        print("Check In:           \(checkInDate)")
+        print("Check Out:          \(checkOutDate)")
+        print("Number of Adults:   \(numberOfAdults)")
         print("Number of Children: \(numberOfChildren)")
-        print("Wi-Fi: \(hasWifi)")
-        print("Room type: \(roomChoice)")
+        print("Wi-Fi:              \(hasWifi)")
+        print("Room type:          \(roomChoice)")
     }
     
     
